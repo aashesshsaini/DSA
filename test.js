@@ -211,3 +211,86 @@ Day 30	~₹10,045.35	₹1.53	~₹10,046.88
 // const date = new Date();
 // const localdate = date.toISOString();
 // console.log({ date, localdate });
+
+// function outer() {
+//   const a = 5;
+//   return function inner() {
+//     console.log(a);
+//   };
+// }
+
+// const inner = outer();
+// console.log(inner());
+// console.log(inner());
+
+// const multer = require("multer");
+
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, "/uploads");
+//   },
+//   filename: (req, file, cb) => {
+//     const uniqueName = `${Date.now()}-${file.originalname}`;
+//     cb(null, uniqueName);
+//   },
+// });
+
+// const upload = multer({ storage, fileFilter });
+
+// app.post(
+//   "/singleImage",
+//   validate(validation.singleImage),
+//   upload.single("image"),
+//   controller.singleImage
+// );
+
+// import { createClient } from "redis";
+
+// const redisClient = createClient({ url });
+
+// redisClient.on(err, () => {});
+
+// (async () => {
+//   redisClient.connect();
+//   conn;
+// })();
+
+// Docker is a tool that package our app and everything it needs to run into a box. And this box is called container. Sometime our application work in our maching but not working in someone elce maching due to some reason like nodeJs version mismatch, os confi mismatch, dependices version mismntach. so docker fix this issue by bundling everything (code+dependencies+environment) together into a single unit
+// throttling and debouncing both the technologis are use to conrtro how often a function is excute
+// so throtting means excute the function at a regular intrerval , no matter how many itme it's triggered fior exmaple; scrolling, resizing
+// Debounce means wait for pause useer action for some ms, then excute the function
+
+let s = "my name is aashish saini";
+let Output = "my si hsihsaa inias";
+let result = " ";
+let res = " ";
+// console.log(s.length);
+// for (let i = 0; i < s.length; i++) {
+//   const ch = s[i];
+//   if (ch === " ") {
+//     result = res + "";
+//     res = " ";
+//   } else {
+//     res = ch + res;
+//   }
+// }
+// result = result + res;
+// console.log(result);
+
+for (let i = 0; i < s.length; i++) {
+  const ch = s[i];
+
+  if (ch === " ") {
+    // word finished → append reversed word to result
+    result = result + res + " ";
+    res = "";
+  } else {
+    // keep reversing the current word
+    res = ch + res;
+  }
+}
+
+// append last word
+result += res;
+
+console.log(result);

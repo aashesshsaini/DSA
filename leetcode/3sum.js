@@ -25,8 +25,28 @@
 
 let a = [-1, 0, 1, 2, -1, -4];
 
-let map = new Map();
-
-for (let i = 0; i < arr.length; i++) {
-  sum();
+function partition(arr, lb, ub) {
+  let start = lb;
+  let end = ub;
+  let pivot = arr[start];
+  while (start < end) {
+    while (arr[start] <= pivot) {
+      start++;
+    }
+    while (arr[end] > pivot) {
+      end--;
+    }
+  }
 }
+
+function quickSortFunction(arr, lb, ub) {
+  if (lb < ub) {
+    const loc = partition(arr, 0, arr.length - 1);
+    quickSortFunction(arr, 0, loc - 1);
+    quickSortFunction(arr, loc + 1, ub);
+  }
+}
+
+const threeSum = (arr) => {
+  quickSortFunction(arr, 0, arr.length - 1);
+};
