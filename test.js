@@ -58,18 +58,21 @@ Day 30	~₹10,045.35	₹1.53	~₹10,046.88
 // let a = [1, 2, 3, 4];
 // a[1] = 5;
 // const b = [1, 2, 3, 4];
-// b[1] = 5;
+// a = [4, 5];
 
 // console.log({ a, b });
 
 // const user = {
 //   name: "Aashish",
-//   greet() {
-//     console.log("Hello " + name);
+//   same: function () {
+//     const greet = () => {
+//       console.log("Hello " + JSON.stringify(this));
+//     };
+//     greet();
 //   },
 // };
 
-// user.greet();
+// user.same();
 
 // const lodash = require("lodash");
 
@@ -77,7 +80,7 @@ Day 30	~₹10,045.35	₹1.53	~₹10,046.88
 // let copy = {};
 // copy = Object.assign(copy, original);
 // copy = { ...original };
-// copy.name = "changed";
+// copy.address.city = "changed";
 // console.log({ copy, original });
 
 // console.log(original.hasOwnProperty("city"));
@@ -260,11 +263,11 @@ Day 30	~₹10,045.35	₹1.53	~₹10,046.88
 // so throtting means excute the function at a regular intrerval , no matter how many itme it's triggered fior exmaple; scrolling, resizing
 // Debounce means wait for pause useer action for some ms, then excute the function
 
-let s = "my name is aashish saini";
-let Output = "my si hsihsaa inias";
-let result = " ";
-let res = " ";
-// console.log(s.length);
+// let s = "my name is aashish saini";
+// let Output = "my si hsihsaa inias";
+// let result = " ";
+// let res = " ";
+// // console.log(s.length);
 // for (let i = 0; i < s.length; i++) {
 //   const ch = s[i];
 //   if (ch === " ") {
@@ -277,20 +280,57 @@ let res = " ";
 // result = result + res;
 // console.log(result);
 
-for (let i = 0; i < s.length; i++) {
-  const ch = s[i];
+// for (let i = 0; i < s.length; i++) {
+//   const ch = s[i];
 
-  if (ch === " ") {
-    // word finished → append reversed word to result
-    result = result + res + " ";
-    res = "";
-  } else {
-    // keep reversing the current word
-    res = ch + res;
-  }
-}
+//   if (ch === " ") {
+//     // word finished → append reversed word to result
+//     result = result + res + " ";
+//     res = "";
+//   } else {
+//     // keep reversing the current word
+//     res = ch + res;
+//   }
+// }
 
-// append last word
-result += res;
+// // append last word
+// result += res;
 
-console.log(result);
+// console.log(result);
+
+// const arr = [5, 6, 7, 8, 9, 1, 2, 3, 4];
+// let value = 1;
+
+// function binarySearch(arr, value) {
+//   let left = 0;
+//   let right = arr.length - 1; // 2
+//   while (left < right) {
+//     let mid = Math.floor((left + right) / 2); //1
+
+//     console.log({ left, right, mid });
+//     if (arr[mid] === value) {
+//       return mid;
+//     } else if (arr[left] < arr[mid] && value >= arr[left]) {
+//       if (value < arr[mid]) {
+//         right = mid - 1;
+//       } else {
+//         left = mid + 1;
+//       }
+//     } else {
+//       if (value > arr[mid] || value <= arr[right]) {
+//         left = mid + 1;
+//       } else {
+//         right = mid - 1;
+//       }
+//     }
+//   }
+//   return -1;
+// }
+
+// console.log(binarySearch(arr, value));
+
+let a = { abc: 123 };
+
+a.freeze();
+
+a = { abc: 435 };

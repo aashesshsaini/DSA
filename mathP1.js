@@ -171,7 +171,7 @@
 
 10;
 // LCM of two numbers
-// Input: 4, 6
+// Input: 4, 6 //2,2,3
 // Output: 12
 
 // let n1 = 6;
@@ -480,7 +480,7 @@
 // Input: "abcabcbb"
 // Output: 3 (substring "abc")
 
-// let s = "abcabcbb";
+let s = "abcabcbb";
 
 function subStringWithoutRepeat(s) {
   let set = new Set();
@@ -504,8 +504,8 @@ function subStringWithoutRepeat(s) {
   return { maxLength, res };
 }
 
-// const result = subStringWithoutRepeat(s);
-// console.log({ result });
+const result = subStringWithoutRepeat(s);
+console.log({ result });
 
 // let arr = [2, 2, 3, 4, 5, 3, 4, 5, 1];
 

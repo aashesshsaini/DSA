@@ -1,9 +1,9 @@
 const arr = [2, 3, 1, 5, 4, 10, 6, 4, 3, 25, 1];
 
 function partition(arr, lb, ub) {
-  let start = lb;
-  let end = ub;
-  let pivot = arr[lb];
+  let start = lb; // 3
+  let end = ub; //2
+  let pivot = arr[lb]; //2
   while (start < end) {
     while (arr[start] <= pivot) {
       start++;
@@ -12,7 +12,7 @@ function partition(arr, lb, ub) {
       end--;
     }
     if (start < end) {
-      [arr[start], arr[end]] = [arr[end], arr[start]];
+      [arr[start], arr[end]] = [arr[end], arr[start]]; // [2, 1, 1, 5, 4, 10, 6, 4, 3, 25, 3]
     }
   }
   [arr[end], arr[lb]] = [arr[lb], arr[end]];

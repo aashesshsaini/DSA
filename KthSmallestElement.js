@@ -23,7 +23,7 @@
 
 // console.log({result})
 
-let arr = [3, 2, 4, 7, 5, 6, 1];
+let arr = [0, 2, 4, 7, 5, 6, 1];
 
 const kthSmallestElement = (arr, k) => {
   let map = new Map();
