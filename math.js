@@ -151,19 +151,19 @@
 // Input: 12, 18
 // Output: 6
 
-// let n1 = 40
-// let n2 = 20
-// let HCF = 1
+let n1 = 40;
+let n2 = 20;
+let HCF = 1;
 
-// for (let i = 1; i <= Math.min(n1, n2); i++){
-//     if (n1 % i === 0 && n2 % i === 0) {
-//         if (HCF < i) {
-//             HCF = i
-//         }
-//     }
-// }
+for (let i = 1; i <= Math.min(n1, n2); i++) {
+  if (n1 % i === 0 && n2 % i === 0) {
+    if (HCF < i) {
+      HCF = i;
+    }
+  }
+}
 
-// console.log({HCF})
+console.log({ HCF });
 
 10;
 // LCM of two numbers
@@ -249,35 +249,35 @@
 
 // console.log({result})
 
-14;
-let arr = [
-  [1, 2, 3, 4],
-  [6, 7, 8, 9],
-  [11, 12, 13, 14],
-  [16, 17, 18, 19],
-];
+// 14;
+// let arr = [
+//   [1, 2, 3, 4],
+//   [6, 7, 8, 9],
+//   [11, 12, 13, 14],
+//   [16, 17, 18, 19],
+// ];
 
-function nightDegreeRoation(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i; j < arr[0].length; j++) {
-      let temp = arr[i][j];
-      arr[i][j] = arr[j][i];
-      arr[j][i] = temp;
-    }
-  }
-  for (let i = 0; i < arr.length; i++) {
-    let start = 0;
-    let end = arr.length - 1;
-    while (start < end) {
-      temp = arr[i][start];
-      arr[i][start] = arr[i][end];
-      arr[i][end] = temp;
-      start++;
-      end--;
-    }
-  }
-  return arr;
-}
+// function nightDegreeRoation(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i; j < arr[0].length; j++) {
+//       let temp = arr[i][j];
+//       arr[i][j] = arr[j][i];
+//       arr[j][i] = temp;
+//     }
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     let start = 0;
+//     let end = arr.length - 1;
+//     while (start < end) {
+//       temp = arr[i][start];
+//       arr[i][start] = arr[i][end];
+//       arr[i][end] = temp;
+//       start++;
+//       end--;
+//     }
+//   }
+//   return arr;
+// }
 
-const result = nightDegreeRoation(arr);
-console.log(result);
+// const result = nightDegreeRoation(arr);
+// console.log(result);

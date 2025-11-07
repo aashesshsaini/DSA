@@ -22,14 +22,14 @@ let cumulativeSumArray = [];
 
 // console.log({ result });
 
-const cumulativeSum = (arr) => {
-  let l = arr.length;
-  for (let i = 1; i < l; i++) {
-    arr[i] = arr[i] + arr[i - 1];
-  }
-  return arr;
-};
+// const cumulativeSum = (arr) => {
+//   let l = arr.length;
+//   for (let i = 1; i < l; i++) {
+//     arr[i] = arr[i] + arr[i - 1];
+//   }
+//   return arr;
+// };
 
-const result = cumulativeSum(arr);
+// const result = cumulativeSum(arr);
 
-console.log({ result });
+// console.log({ result });

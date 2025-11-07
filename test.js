@@ -329,8 +329,66 @@ Day 30	~₹10,045.35	₹1.53	~₹10,046.88
 
 // console.log(binarySearch(arr, value));
 
-let a = { abc: 123 };
+// const user = {
+//   name: "Aashish",
+//   address1: function () {
+//     console.log(this);
+//     console.log(`${this.name} is from the mzn`);
+//   },
+//   address: () => {
+//     console.log(this);
+//     console.log(`${this.name} is from the mzn`);
+//   },
+// };
 
-a.freeze();
+// user.address();
+// user.address1();
 
-a = { abc: 435 };
+// function userLocation(location) {
+//   console.log(`${this.name} is live in ${location}`);
+// }
+
+// const user = { name: "Aashish" };
+
+// userLocation.call(user, "DElhi");
+// userLocation.apply(user, ["Delhi"]);
+// const data = userLocation.bind(user, "Delhi");
+// data();
+
+// Array.prototype.last = function () {
+//   return this[this.length - 1];
+// };
+
+// Array.prototype.myMap = function (callback) {
+//   let result = [];
+//   for (let i = 0; i < this.length; i++) {
+//     result.push(callback(this[i], i, this));
+//   }
+//   return result;
+// };
+
+// Array.prototype.myFilter = function (callback) {
+//   const result = [];
+//   for (let i = 0; i < this.length; i++) {
+//     if (callback(this[i], i, this)) {
+//       result.push(this[i]);
+//     }
+//   }
+//   return result;
+// };
+
+// const arr = [1, 2, 3, 4];
+
+// const multiple = arr.myMap((value, index, arr) => value * 2);
+// const multiple = arr.myFilter((value, index, arr) => value >= 2);
+
+// console.log(multiple);
+
+// ++--+
+
+// How multithreading works in Node.js despite being single-threaded
+/* Yeah, as we know that nodeJs is a single threaded despite nodejs can handle multiple-request at a time, and it give thanks to event-loop. NodeJs runs the js code line by line
+but when the async code come like file reading, database query or any network request, these offloads to libuv library beacuse these taks are blocking, so these tasks handle by
+the libuv library and when these tasks are done , then the callback of these operation push into the callback queue and here event-loop come, when call stack is empty, then event
+loop co ntinously check the callback queue 
+*/
